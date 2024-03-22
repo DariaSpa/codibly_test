@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/codibly_test/static/css/main.fad3f99c.css",
+    "main.js": "/codibly_test/static/js/main.86906192.js",
+    "index.html": "/codibly_test/index.html",
+    "main.fad3f99c.css.map": "/codibly_test/static/css/main.fad3f99c.css.map",
+    "main.86906192.js.map": "/codibly_test/static/js/main.86906192.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fad3f99c.css",
+    "static/js/main.86906192.js"
+  ]
+}
