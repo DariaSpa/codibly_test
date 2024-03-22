@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { GetFilteredProductPayload, GetProductsPayload, Product } from '../@types';
+import { ErrorMessage, GetFilteredProductPayload, GetProductsPayload, Product } from '../@types';
 
 
 interface ProductState {
@@ -8,6 +8,7 @@ interface ProductState {
     total: number;
     totalPages: number;
     isProductsLoading: boolean;
+    error: ErrorMessage;
 }
 
 const initialState: ProductState = {
@@ -15,6 +16,10 @@ const initialState: ProductState = {
     total: 0,
     totalPages: 0,
     isProductsLoading: false,
+    error: {
+        show: false,
+        message: '',
+    }
 };
 
 export const productSlice = createSlice({
@@ -42,6 +47,9 @@ export const productSlice = createSlice({
             state.products = null;
             state.totalPages = 0;
         },
+        setError: (state, action: PayloadAction<ErrorMessage>) => {
+            state.error = action.payload;
+        },
     },
 });
 
@@ -53,11 +61,13 @@ export const {
     setTotalPages,
     setTotal,
     clearProducts,
+    setError,
 } = productSlice.actions;
 
 export const selectProducts = (state: RootState) => state.product.products;
 export const selectTotalPages = (state: RootState) => state.product.totalPages;
 export const selectTotal = (state: RootState) => state.product.total;
 export const selectIsProductsLoading = (state: RootState) => state.product.isProductsLoading;
+export const selectError = (state: RootState) => state.product.error;
 
 export default productSlice.reducer;

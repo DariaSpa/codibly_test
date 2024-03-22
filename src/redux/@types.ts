@@ -14,3 +14,8 @@ export type Product = {
     color: string;
     pantone_value: string;
 }
+
+export type ErrorMessage = {
+    show: boolean;
+    message: string;
+}

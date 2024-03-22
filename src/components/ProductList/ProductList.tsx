@@ -18,6 +18,7 @@ import FilterTextField from '../FilterTextField/FilterTextField';
 import ProductTable from '../ProductTable/ProductTable';
 
 import styles from "./ProductList.module.css";
+import ErrorMessage from '../ErrorMessage';
 
 const ProductList: React.FC = () => {
     const products = useSelector(selectProducts);
@@ -87,6 +88,7 @@ const ProductList: React.FC = () => {
                 <ProductTable products={products} handleRowClick={handleRowClick} total={total} page={page} handleChangePage={handleChangePage} />
             )}
             <ProductModal open={modalOpen} onClose={handleCloseModal} product={selectedProduct} />
+            <ErrorMessage />
         </div>
     );
 };
