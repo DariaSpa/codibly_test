@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/codibly_test/static/css/main.fad3f99c.css",
-    "main.js": "/codibly_test/static/js/main.81c74dff.js",
+    "main.js": "/codibly_test/static/js/main.4f4878a0.js",
     "index.html": "/codibly_test/index.html",
     "main.fad3f99c.css.map": "/codibly_test/static/css/main.fad3f99c.css.map",
-    "main.81c74dff.js.map": "/codibly_test/static/js/main.81c74dff.js.map"
+    "main.4f4878a0.js.map": "/codibly_test/static/js/main.4f4878a0.js.map"
   },
   "entrypoints": [
     "static/css/main.fad3f99c.css",
-    "static/js/main.81c74dff.js"
+    "static/js/main.4f4878a0.js"
   ]
 }
